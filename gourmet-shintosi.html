@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新鳥栖の道市場 | 鳥栾市紹介サイト</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <h1><a href="index.html">鳥栖市(Tosu)</a></h1>
+
+      <input type="checkbox" id="navBtn">
+      <label for="navBtn" class="open"><span></span></label>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">鳥栖市について</a></li>
+          <li class="nav-heading">おすすめスポット</li>
+          <li><a href="park.html">公園・緑地</a></li>
+          <li><a href="shopping.html">ショッピングモール</a></li>
+          <li><a href="gourmet.html">グルメ</a></li>
+          <li><a href="history.html">歴史・文化</a></li>
+          <li><a href="facility.html">施設</a></li>
+        </ul>
+      </nav>
+        <div class="hero">
+          <picture>
+            <source media="(max-width: 599px)" srcset="images/K468_Original.jpg">
+            <source media="(min-width: 600px)" srcset="images/K468_Original.jpg">
+            <img src="images/K468_Original.jpg" alt="新鳥栖の道市場">
+          </picture>
+          <div class="hero-text">
+            <h2>新鳥栖の道市場</h2>
+            <p>新鳥栖駅周辺の食の拠点</p>
+          </div>
+        </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h2>新鳥栖の道市場について</h2>
+        <p>新鳥栖駅周辺に位置する新鳥栖の道市場は、地域の食の拠点として多くの訪問者に愛されています。新鮮な食材と様々なグルメが揃う、活気あふれる場所です。</p>
+      </section>
+
+      <section class="gallery">
+        <h2>新鳥栖の道市場の様子</h2>
+        <div class="blog-posts">
+          <article class="blog-post">
+            <img src="images/GIMG_2040 Copy 2.jpeg" alt="新鳥栖の道市場の風景1">
+            <h3>食の拠点</h3>
+            <p>新鮮な食材と様々なグルメが揃っています。</p>
+          </article>
+        </div>
+        <p style="text-align: center; color: #ff6b6b; font-weight: bold; margin-top: 20px;">--- 更新中 ---</p>
+        <p style="text-align: center; color: #ff6b6b; font-weight: bold;">📝 このページは更新中です</p>
+        <p><a href="gourmet.html">← グルメ一覧に戻る</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© My Site </p>
+    </footer>
+
+    <!-- トップに戻るボタン -->
+    <button id="scrollToTopBtn" aria-label="トップに戻る">↑</button>
+  </div>
+  <script src="nav.js"></script>
+
+  <script>
+  // トップに戻るボタンの表示/非表示制御
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  const wrap = document.getElementById('wrap');
+
+  wrap.addEventListener('scroll', () => {
+    if (wrap.scrollTop > 300) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    wrap.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  </script>
+</body>
+
+</html>

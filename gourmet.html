@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>グルメ - 写真</title>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="wrap">
+	<header>
+		<h1><a href="index.html">鳥栖市（Tosu）</a></h1>
+
+		<input type="checkbox" id="navBtn">
+		<label for="navBtn" class="open"><span></span></label>
+
+		<nav>
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="about.html">鳥栖市について</a></li>
+				<li class="nav-heading">おすすめスポット</li>
+				<li><a href="park.html">公園・緑地</a></li>
+				<li><a href="shopping.html">ショッピングモール</a></li>
+				<li><a href="gourmet.html">グルメ</a></li>
+				<li><a href="history.html">歴史・文化</a></li>
+				<li><a href="facility.html">施設</a></li>
+			</ul>
+		</nav>
+			<div class="hero">
+				<picture>
+					<source media="(max-width: 599px)" srcset="images/K468_Original.jpg">
+					<source media="(min-width: 600px)" srcset="images/K468_Original.jpg">
+					<img src="images/K468_Original.jpg" alt="鳥栖の風景">
+				</picture>
+				<div class="hero-text">
+					<h2>グルメ</h2>
+					<p>地元の名物やおすすめ飲食店を紹介します。</p>
+				</div>
+			</div>
+	</header>
+
+	<main>
+		<section class="gallery">
+			<h2>グルメ</h2>
+			<div class="container">
+				<a href="gourmet-chuyoken.html" class="card-link">
+					<article class="card">
+						<img src="images/うどん.jpg" alt="グルメ写真1">
+						<h3>中央軒</h3>
+						<p>地元の味を代表するお店</p>
+					</article>
+				</a>
+				<a href="gourmet-cafe.html" class="card-link">
+					<article class="card">
+						<img src="images/GIMG_2056.jpeg" alt="グルメ写真2">
+						<h3>ランプル台所</h3>
+						<p>こだわりの台所料理</p>
+					</article>
+				</a>
+				<a href="gourmet-market.html" class="card-link">
+					<article class="card">
+						<img src="images/GIMG_2052.jpeg" alt="グルメ写真3">
+						<h3>かつみや</h3>
+						<p>こだわりのとんかつ専門店</p>
+					</article>
+				</a>
+				<a href="gourmet-local.html" class="card-link">
+					<article class="card">
+						<img src="images/GIMG_2060.jpeg" alt="グルメ写真4">
+						<h3>夢を語れ</h3>
+						<p>駅近くの居酒屋</p>
+					</article>
+				</a>
+				<a href="gourmet-egao.html" class="card-link">
+					<article class="card">
+						<img src="images/GIMG_2021.jpeg" alt="グルメ写真5">
+						<h3>笑顔が見たいから</h3>
+						<p>心温まるおもてなしの店</p>
+					</article>
+				</a>
+				<a href="gourmet-gyusen.html" class="card-link">
+					<article class="card">
+						<img src="images/GIMG_2018 3.jpeg" alt="グルメ写真6">
+						<h3>牛船</h3>
+						<p>新鮮な牛肉料理</p>
+					</article>
+				</a>
+				<a href="gourmet-shintosi.html" class="card-link">
+					<article class="card">
+						<img src="images/GIMG_2040 Copy 2.jpeg" alt="グルメ写真7">
+						<h3>新鳥栖の道市場</h3>
+						<p>新鳥栖駅周辺の食の拠点</p>
+					</article>
+				</a>
+				<a href="gourmet-friends.html" class="card-link">
+					<article class="card">
+						<img src="images/GIMG_2041 Copy 2.jpeg" alt="グルメ写真8">
+						<h3>フレンズ</h3>
+						<p>新鮮な食材と料理</p>
+					</article>
+				</a>
+				<a href="gourmet-tempura.html" class="card-link">
+					<article class="card">
+						<img src="images/GIMG_2045 2.jpeg" alt="グルメ写真9">
+						<h3>天ぷら　まき</h3>
+						<p>揚げたての天ぷら専門店</p>
+					</article>
+				</a>
+			</div>
+			<p><a href="index.html">← 戻る</a></p>
+		</section>
+	</main>
+
+	<footer>
+
+	</footer>
+
+	<!-- トップに戻るボタン -->
+	<button id="scrollToTopBtn" aria-label="トップに戻る">↑</button>
+	</div>
+
+	<script src="nav.js"></script>
+
+	<script>
+	// トップに戻るボタンの表示/非表示制御
+	const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+	const wrap = document.getElementById('wrap');
+
+	wrap.addEventListener('scroll', () => {
+		if (wrap.scrollTop > 300) {
+			scrollToTopBtn.classList.add('show');
+		} else {
+			scrollToTopBtn.classList.remove('show');
+		}
+	});
+
+	scrollToTopBtn.addEventListener('click', () => {
+		wrap.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		});
+	});
+	</script>
+</body>
+
+</html>

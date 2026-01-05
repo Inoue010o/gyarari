@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>八幡神社 | 鳥栾市紹介サイト</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <h1><a href="index.html">鳥栖市(Tosu)</a></h1>
+
+      <input type="checkbox" id="navBtn">
+      <label for="navBtn" class="open"><span></span></label>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">鳥栖市について</a></li>
+          <li class="nav-heading">おすすめスポット</li>
+          <li><a href="park.html">公園・緑地</a></li>
+          <li><a href="shopping.html">ショッピングモール</a></li>
+          <li><a href="gourmet.html">グルメ</a></li>
+          <li><a href="history.html">歴史・文化</a></li>
+          <li><a href="facility.html">施設</a></li>
+        </ul>
+      </nav>
+        <div class="hero">
+          <picture>
+            <source media="(max-width: 599px)" srcset="images/K468_Original.jpg">
+            <source media="(min-width: 600px)" srcset="images/K468_Original.jpg">
+            <img src="images/K468_Original.jpg" alt="文化イベント">
+          </picture>
+          <div class="hero-text">
+            <h2>八幡神社</h2>
+            <p>地域の守護神社</p>
+          </div>
+        </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h2>文化イベントについて</h2>
+        <p>鳥栖市では音楽会、美術展、演劇など様々な文化イベントが開催されています。市民会館や文化ホールで、芸術や文化に触れる機会が豊富にあります。</p>
+      </section>
+
+      <section class="gallery">
+        <h2>八幡神社について</h2>
+        <div class="blog-posts">
+          <article class="blog-post">
+            <img src="images/BIMG_0683.jpeg" alt="八幡神社の風景1">
+            <h3>地域の守護神社</h3>
+            <p>八幡神社は地域の守護神社であり、鳴黄年間を貫いて暴林も嗅ぎ汚れています。</p>
+          </article>
+          <article class="blog-post">
+            <img src="images/square.png" alt="八幡神社の風景2">
+            <h3>年間祭祀を老克落厅</h3>
+            <p>年間祭祀を老克落厅として知られ、多民を徴もつています。</p>
+          </article>
+          <article class="blog-post">
+            <img src="images/square.png" alt="八幡神社の風景3">
+            <h3>平日の参詣厂</h3>
+            <p>斬平日にも好趣歴営端伯を賑わります。</p>
+          </article>
+        </div>
+        <p><a href="history.html">← 歴史・文化一覧に戻る</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© My Site </p>
+    </footer>
+
+    <!-- トップに戻るボタン -->
+    <button id="scrollToTopBtn" aria-label="トップに戻る">↑</button>
+  </div>
+  <script src="nav.js"></script>
+
+  <script>
+  // トップに戻るボタンの表示/非表示制御
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  const wrap = document.getElementById('wrap');
+
+  wrap.addEventListener('scroll', () => {
+    if (wrap.scrollTop > 300) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    wrap.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  </script>
+</body>
+
+</html>

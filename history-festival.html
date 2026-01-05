@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>斧山公園 | 鳥栾市紹介サイト</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <h1><a href="index.html">鳥栖市(Tosu)</a></h1>
+
+      <input type="checkbox" id="navBtn">
+      <label for="navBtn" class="open"><span></span></label>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">鳥栖市について</a></li>
+          <li class="nav-heading">おすすめスポット</li>
+          <li><a href="park.html">公園・緑地</a></li>
+          <li><a href="shopping.html">ショッピングモール</a></li>
+          <li><a href="gourmet.html">グルメ</a></li>
+          <li><a href="history.html">歴史・文化</a></li>
+          <li><a href="facility.html">施設</a></li>
+        </ul>
+      </nav>
+        <div class="hero">
+          <picture>
+            <source media="(max-width: 599px)" srcset="images/K468_Original.jpg">
+            <source media="(min-width: 600px)" srcset="images/K468_Original.jpg">
+            <img src="images/K468_Original.jpg" alt="祭りの様子">
+          </picture>
+          <div class="hero-text">
+            <h2>斧山公園</h2>
+            <p>歴史と自然が融合した公園</p>
+          </div>
+        </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h2>祭りの様子について</h2>
+        <p>鳥栖市では年間を通じて様々な祭りやイベントが開催されます。伝統的な祭りから現代的なイベントまで、地域の魅力を感じられる行事が盛りだくさんです。</p>
+      </section>
+
+      <section class="gallery">
+        <h2>旭山公園について</h2>
+        <div class="blog-posts">
+          <article class="blog-post">
+            <img src="images/BIMG_0633.jpeg" alt="旭山公園の風景1">
+            <h3>春の桜の光暁</h3>
+            <p>旭山公園は春の桜を矗中に多数の民衆で賑わいます。</p>
+          </article>
+          <article class="blog-post">
+            <img src="images/square.png" alt="旭山公園の風景2">
+            <h3>古木群生</h3>
+            <p>旭山公園は蒼既の阿竜技会場であり、古木群生の新緑を気もよい空間です。</p>
+          </article>
+          <article class="blog-post">
+            <img src="images/square.png" alt="旭山公園の風景3">
+            <h3>自然を感じる場所</h3>
+            <p>始一年中を通じて、要約暴林の鯨香も嗅ぎ汚れた業だいひ楫膚、お日卜がこ澄まれる会場。</p>
+          </article>
+        </div>
+        <p><a href="history.html">← 歴史・文化一覧に戻る</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© My Site </p>
+    </footer>
+
+    <!-- トップに戻るボタン -->
+    <button id="scrollToTopBtn" aria-label="トップに戻る">↑</button>
+  </div>
+  <script src="nav.js"></script>
+
+  <script>
+  // トップに戻るボタンの表示/非表示制御
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  const wrap = document.getElementById('wrap');
+
+  wrap.addEventListener('scroll', () => {
+    if (wrap.scrollTop > 300) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    wrap.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  </script>
+</body>
+
+</html>
