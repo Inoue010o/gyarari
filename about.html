@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>鳥栖市について | 鳥栖市紹介サイト</title>
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body id="about">
+	<div id="wrap">
+		<header>
+			<h1><a href="index.html">鳥栖市（Tosu）</a></h1>
+
+			<input type="checkbox" id="navBtn">
+			<label for="navBtn" class="open"><span></span></label>
+
+			<nav>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about.html">鳥栖市について</a></li>
+					<li class="nav-heading">おすすめスポット</li>
+					<li><a href="park.html">公園・緑地</a></li>
+					<li><a href="shopping.html">ショッピングモール</a></li>
+					<li><a href="gourmet.html">グルメ</a></li>
+					<li><a href="history.html">歴史・文化</a></li>
+					<li><a href="facility.html">施設</a></li>
+				</ul>
+			</nav>
+			<div class="hero">
+				<picture>
+					<source media="(max-width: 599px)" srcset="images/K468_Original.jpg">
+					<source media="(min-width: 600px)" srcset="images/K468_Original.jpg">
+					<img src="images/K468_Original.jpg" alt="鳥栖の風景">
+				</picture>
+				<div class="hero-text">
+					<h2>鳥栖市について</h2>
+					<p>交通の要所であり、自然と都市機能が調和したまちです。</p>
+		</header>
+
+		<main>
+			<section class="about-hero">
+				<h2>鳥栖市の紹介</h2>
+				<p>鳥栖市は佐賀県南東部に位置し、交通の利便性と自然が調和したまちです。ここでは文化、観光、アクセス情報を掲載します。</p>
+				<img src="images/RIMG_0553.jpg" alt="鳥栖市の風景" style="max-width: 100%; height: auto; margin-top: 20px;">
+			</section>
+
+			<section class="about-grid container">
+				<div class="card">
+					<h3>概要</h3>
+					<p>人口や面積、気候などの基本情報。商業施設や公共交通の拠点が整っています。</p>
+				</div>
+				<div class="card">
+					<h3>観光・見どころ</h3>
+					<p>公園、地元のイベント、近隣の観光地など。季節ごとのおすすめスポットを紹介。</p>
+				</div>
+				<div class="card">
+					<h3>アクセス</h3>
+					<p>九州の交通の要所として、電車やバスでのアクセスが充実しています。</p>
+				</div>
+			</section>
+
+			<section class="map">
+				<h3>地図</h3>
+				<p>鳥栖市の位置（埋め込み地図）</p>
+				<div class="map-responsive">
+					<!-- iframe をデフォルトで表示。file:// の場合は下のローカルSVGを表示する -->
+					<iframe
+						src="https://maps.google.com/maps?q=%E9%B3%A5%E6%A0%93%E5%B8%82%2C%20%E4%BD%90%E8%B3%80%E7%9C%8C&z=13&output=embed"
+						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade" title="鳥栖市の地図"></iframe>
+					<img id="map-local" src="images/map-placeholder.svg" alt="地図プレースホルダー" style="display:none;" />
+				</div>
+				<p class="map-fallback" style="display:none;">地図が表示されない場合は、<a
+						href="https://www.google.com/maps?q=%E9%B3%A5%E6%A0%93%E5%B8%82%2C%20%E4%BD%90%E8%B3%80%E7%9C%8C"
+						target="_blank" rel="noopener">Google Maps で開く</a> をクリックしてください。</p>
+			</section>
+
+		</main>
+
+		<footer>
+			<p>© My Site </p>
+		</footer>
+	</div>
+	<script>
+		// file:// で開いた場合は iframe がブロックされることがあるため、ローカルSVGに切り替える
+		(function () {
+			try {
+				var isFile = location.protocol === 'file:';
+				var iframe = document.querySelector('.map-responsive iframe');
+				var local = document.getElementById('map-local');
+				var fallback = document.querySelector('.map-fallback');
+				if (isFile) {
+					if (iframe) iframe.style.display = 'none';
+					if (local) local.style.display = 'block';
+					if (fallback) fallback.style.display = 'block';
+				} else {
+					if (iframe) iframe.style.display = '';
+					if (local) local.style.display = 'none';
+					if (fallback) fallback.style.display = 'none';
+				}
+			} catch (e) {
+				// silently ignore
+				console && console.warn && console.warn('map swap error', e);
+			}
+		})();
+	</script>
+
+	<!-- トップに戻るボタン -->
+	<button id="scrollToTopBtn" aria-label="トップに戻る">↑</button>
+
+	<script src="nav.js"></script>
+
+	<script>
+		// トップに戻るボタンの表示/非表示制御
+		const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+		const wrap = document.getElementById('wrap');
+
+		wrap.addEventListener('scroll', () => {
+			if (wrap.scrollTop > 300) {
+				scrollToTopBtn.classList.add('show');
+			} else {
+				scrollToTopBtn.classList.remove('show');
+			}
+		});
+
+		scrollToTopBtn.addEventListener('click', () => {
+			wrap.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		});
+	</script>
+</body>
+
+</html>

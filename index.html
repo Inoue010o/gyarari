@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<script src="gallery.js" defer></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<title>鳥栖 PHOTO GALLERY</title>
+</head>
+
+<body>
+	<header>
+		<h1>
+			<a href="index.html">PHOTO GALLERY</a>
+		</h1>
+		<nav class="pc-nav">
+			<ul>
+				<li><a href="#park">公園</a></li>
+				<li><a href="#building">施設</a></li>
+				<li><a href="#food">グルメ</a></li>
+				<li><a href="#history">歴史</a></li>
+				<li><a href="#history">歴史</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="main-visual">
+		<p class="title">PHOTO GALLERY</p>
+	</div>
+
+	<a name="park" id="park">・</a>
+	<div class="under-area">
+		<h2 class="section-title animate-text">公園・緑地</h2>
+		<div id="gallery-park" class="gallery">
+			<!-- Images will be loaded by JavaScript -->
+		</div>
+	</div>
+
+	<a name="building" id="building">・</a>
+	<div class="under-area">
+		<h2 class="section-title animate-text">施設</h2>
+		<div id="gallery-building" class="gallery">
+			<!-- Images will be loaded by JavaScript -->
+		</div>
+	</div>
+
+	<a name="food" id="food">・</a>
+	<div class="under-area">
+		<h2 class="section-title animate-text">グルメ</h2>
+		<div id="gallery-food" class="gallery">
+			<!-- Images will be loaded by JavaScript -->
+		</div>
+	</div>
+
+	<a name="history" id="history">・</a>
+	<div class="under-area">
+		<h2 class="section-title animate-text">歴史・文化</h2>
+		<div id="gallery-history" class="gallery">
+			<!-- Images will be loaded by JavaScript -->
+		</div>
+	</div>
+
+
+
+	<div id="lightbox" class="lightbox">
+		<span class="close">&times;</span>
+		<img class="lightbox-content" id="lightbox-img">
+		<div id="caption"></div>
+	</div>
+
+	<footer>
+		<p>&copy; 2025 Tosu Photo Gallery</p>
+	</footer>
+
+	<!-- トップに戻るボタン -->
+	<button id="scrollToTopBtn" aria-label="トップに戻る">↑</button>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="gallery.js"></script>
+	<script src="nav.js"></script>
+	<script src="nav.js"></script>
+	<script src="scroll-animation.js"></script>
+	<script src="swiper-init.js"></script>
+
+	<script>
+		// トップに戻るボタンの表示/非表示制御
+		const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+		// main-visualの高さ分スクロールしたらボタンを表示
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 300) {
+				scrollToTopBtn.classList.add('show');
+			} else {
+				scrollToTopBtn.classList.remove('show');
+			}
+		});
+
+		scrollToTopBtn.addEventListener('click', () => {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		});
+	</script>
+</body>
+
+</html>
