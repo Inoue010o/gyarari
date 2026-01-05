@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鳥栾市民会球場 | 鳥栾市紹介サイト</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <h1><a href="index.html">鳥栖市(Tosu)</a></h1>
+
+      <input type="checkbox" id="navBtn">
+      <label for="navBtn" class="open"><span></span></label>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">鳥栖市について</a></li>
+          <li class="nav-heading">おすすめスポット</li>
+          <li><a href="park.html">公園・緑地</a></li>
+          <li><a href="shopping.html">ショッピングモール</a></li>
+          <li><a href="gourmet.html">グルメ</a></li>
+          <li><a href="history.html">歴史・文化</a></li>
+          <li><a href="facility.html">施設</a></li>
+        </ul>
+      </nav>
+        <div class="hero">
+          <picture>
+            <source media="(max-width: 599px)" srcset="images/K468_Original.jpg">
+            <source media="(min-width: 600px)" srcset="images/K468_Original.jpg">
+            <img src="images/K468_Original.jpg" alt="公共施設">
+          </picture>
+          <div class="hero-text">
+            <h2>鳥栾市民会球場</h2>
+            <p>野球やソフトボールの竞技施設</p>
+          </div>
+        </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h2>公共施設について</h2>
+        <p>鳥栖市には市役所、保健センター、コミュニティセンターなど、市民生活を支える公共施設が各地に配置されています。各種手続きや相談、地域交流の場として利用されています。</p>
+      </section>
+
+      <section class="gallery">
+        <h2>鳥栾市民会球場について</h2>
+        <div class="blog-posts">
+          <article class="blog-post">
+            <img src="images/RIMG_0510.jpg" alt="球場の風景1">
+            <h3>野球やソフトボールの竞技施設</h3>
+            <p>鳥栾市民会球場は野球やソフトボールの竞技施設で、組合や中学、高校の大会等が開催されます。</p>
+          </article>
+          <article class="blog-post">
+            <img src="images/IMG_0511.jpeg" alt="球場の風景2">
+          </article>
+        </div>
+        <p style="text-align: center; color: #ff6b6b; font-weight: bold; margin-top: 20px;">--- 更新中 ---</p>
+        <p style="text-align: center; color: #ff6b6b; font-weight: bold;">📝 このページは更新中です</p>
+        <p><a href="facility.html">← 施設一覧に戻る</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© My Site </p>
+    </footer>
+
+    <!-- トップに戻るボタン -->
+    <button id="scrollToTopBtn" aria-label="トップに戻る">↑</button>
+  </div>
+  <script src="nav.js"></script>
+
+  <script>
+  // トップに戻るボタンの表示/非表示制御
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  const wrap = document.getElementById('wrap');
+
+  wrap.addEventListener('scroll', () => {
+    if (wrap.scrollTop > 300) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    wrap.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  </script>
+</body>
+
+</html>

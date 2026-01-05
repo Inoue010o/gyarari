@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>くすり博物館 | 鳥栾市紹介サイト</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <h1><a href="index.html">鳥栖市(Tosu)</a></h1>
+
+      <input type="checkbox" id="navBtn">
+      <label for="navBtn" class="open"><span></span></label>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">鳥栖市について</a></li>
+          <li class="nav-heading">おすすめスポット</li>
+          <li><a href="park.html">公園・緑地</a></li>
+          <li><a href="shopping.html">ショッピングモール</a></li>
+          <li><a href="gourmet.html">グルメ</a></li>
+          <li><a href="history.html">歴史・文化</a></li>
+          <li><a href="facility.html">施設</a></li>
+        </ul>
+      </nav>
+        <div class="hero">
+          <picture>
+            <source media="(max-width: 599px)" srcset="images/K468_Original.jpg">
+            <source media="(min-width: 600px)" srcset="images/K468_Original.jpg">
+            <img src="images/K468_Original.jpg" alt="くすり博物館">
+          </picture>
+          <div class="hero-text">
+            <h2>くすり博物館</h2>
+            <p>医薬品の歴史と文化を学ぶ施設</p>
+          </div>
+        </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h2>くすり博物館について</h2>
+        <p>くすり博物館は、医薬品の歴史と文化を学べる貴重な施設です。日本の医薬品産業の発展を体験できる展示が充実しており、教育的価値の高い施設として多くの来館者に利用されています。</p>
+      </section>
+
+      <section class="gallery">
+        <h2>くすり博物館の様子</h2>
+        <div class="blog-posts">
+          <article class="blog-post">
+            <img src="images/RIMG_0790.jpeg" alt="くすり博物館の風景1">
+            <h3>医薬品の歴史</h3>
+            <p>医薬品の歴史と文化を学べる施設です。</p>
+          </article>
+          <article class="blog-post">
+            <img src="images/RIMG_0819.jpeg" alt="くすり博物館の風景2">
+            <h3>展示内容</h3>
+            <p>日本の医薬品産業の発展を体験できます。</p>
+          </article>
+          <article class="blog-post">
+            <img src="images/RIMG_0853.jpeg" alt="くすり博物館の風景3">
+            <h3>教育的価値</h3>
+            <p>教育的価値の高い施設として知られています。</p>
+          </article>
+          <article class="blog-post">
+            <img src="images/RIMG_0911.jpeg" alt="くすり博物館の風景4">
+            <h3>博物館の施設</h3>
+            <p>充実した展示施設が整備されています。</p>
+          </article>
+          <article class="blog-post">
+            <img src="images/RIMG_0864.jpeg" alt="くすり博物館の風景5">
+            <h3>貴重な資料</h3>
+            <p>貴重な医薬品関連の資料が展示されています。</p>
+          </article>
+          <article class="blog-post">
+            <img src="images/RIMG_0921.jpeg" alt="くすり博物館の風景5b">
+            <h3>医学的展示</h3>
+            <p>医学的に価値のある展示が数多くあります。</p>
+          </article>
+          <article class="blog-post">
+            <img src="images/RIMG_0946.jpeg" alt="くすり博物館の風景6">
+            <h3>館内の様子</h3>
+            <p>充実した館内環境で楽しく学べます。</p>
+          </article>
+          <article class="blog-post">
+            <img src="images/IMG_0949 2.MOV" alt="くすり博物館の風景7">
+            <h3>特別展示</h3>
+            <p>季節ごとの特別展示も開催されています。</p>
+          </article>
+        </div>
+        <p><a href="facility.html">← 施設一覧に戻る</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© My Site </p>
+    </footer>
+
+    <!-- トップに戻るボタン -->
+    <button id="scrollToTopBtn" aria-label="トップに戻る">↑</button>
+  </div>
+  <script src="nav.js"></script>
+
+  <script>
+  // トップに戻るボタンの表示/非表示制御
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  const wrap = document.getElementById('wrap');
+
+  wrap.addEventListener('scroll', () => {
+    if (wrap.scrollTop > 300) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    wrap.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  </script>
+</body>
+
+</html>
