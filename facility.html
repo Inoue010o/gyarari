@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>施設ギャラリー | 鳥栖市紹介サイト</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <h1><a href="index.html">鳥栖市（Tosu）</a></h1>
+
+      <input type="checkbox" id="navBtn">
+      <label for="navBtn" class="open"><span></span></label>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">鳥栖市について</a></li>
+          <li class="nav-heading">おすすめスポット</li>
+          <li><a href="park.html">公園・緑地</a></li>
+          <li><a href="shopping.html">ショッピングモール</a></li>
+          <li><a href="gourmet.html">グルメ</a></li>
+          <li><a href="history.html">歴史・文化</a></li>
+          <li><a href="facility.html">施設</a></li>
+        </ul>
+      </nav>
+        <div class="hero">
+          <picture>
+            <source media="(max-width: 599px)" srcset="images/K468_Original.jpg">
+            <source media="(min-width: 600px)" srcset="images/K468_Original.jpg">
+            <img src="images/K468_Original.jpg" alt="鳥栖の風景">
+          </picture>
+          <div class="hero-text">
+            <h2>施設</h2>
+            <p>鳥栖市の公共施設やスポーツ施設をご紹介します。</p>
+          </div>
+        </div>
+    </header>
+
+    <main>
+      <section class="gallery">
+        <h2>施設</h2>
+        <div class="container">
+          <a href="facility-culture.html" class="card-link">
+            <article class="card">
+              <img src="images/RIMG_0499.jpg" alt="施設1">
+              <h3>鳥栖市陸上競技場</h3>
+              <p>国際規格対応の陸上競技施設</p>
+            </article>
+          </a>
+          <a href="facility-hall.html" class="card-link">
+            <article class="card">
+              <img src="images/RIMG_0502.jpg" alt="施設1-2">
+              <h3>鳥栖市民文化会館</h3>
+              <p>文化芸術活動の拠点施設</p>
+            </article>
+          </a>
+          <a href="facility-sports.html" class="card-link">
+            <article class="card">
+              <img src="images/RIMG_0506.jpg" alt="施設2">
+              <h3>鳥栖市民体育館</h3>
+              <p>各種スポーツイベントの開催会場</p>
+            </article>
+          </a>
+          <a href="facility-public.html" class="card-link">
+            <article class="card">
+              <img src="images/RIMG_0510.jpg" alt="施設3">
+              <h3>鳥栖市民球場</h3>
+              <p>野球やソフトボールの競技施設</p>
+            </article>
+          </a>
+          <a href="facility-station.html" class="card-link">
+            <article class="card">
+              <img src="images/RIMG_0523.jpg" alt="施設3-2">
+              <h3>鳥栖駅</h3>
+              <p>九州の交通拠点となる駅舎</p>
+            </article>
+          </a>
+          <a href="facility-shintosi-station.html" class="card-link">
+            <article class="card">
+              <img src="images/RIMG_0616.jpg" alt="施設3-3">
+              <h3>新鳥栖駅</h3>
+              <p>新幹線と在来線の接続駅</p>
+            </article>
+          </a>
+          <a href="facility-sunmesse.html" class="card-link">
+            <article class="card">
+              <img src="images/RIMG_0526.jpg" alt="施設3-4">
+              <h3>サンメッセ鳥栖</h3>
+              <p>大型商業施設とアウトレット</p>
+            </article>
+          </a>
+          <a href="facility-stadium.html" class="card-link">
+            <article class="card">
+              <img src="images/RIMG_0578.jpg" alt="施設3-5">
+              <h3>駅前不動産スタジアム</h3>
+              <p>鳥栖フューチャーズの本拠地</p>
+            </article>
+          </a>
+          <a href="facility-other.html" class="card-link">
+            <article class="card">
+              <img src="images/RIMG_0584.jpg" alt="施設4-1">
+              <h3>サロンパスアリーナ</h3>
+              <p>多目的スポーツ施設</p>
+            </article>
+          </a>
+          <a href="facility-medicine.html" class="card-link">
+            <article class="card">
+              <img src="images/RIMG_0790.jpeg" alt="施設4-2">
+              <h3>くすり博物館</h3>
+              <p>医薬品の歴史と文化を学ぶ施設</p>
+            </article>
+          </a>
+          <a href="facility-others.html" class="card-link">
+            <article class="card">
+              <img src="images/20200621_184008 2.jpg" alt="施設4">
+              <h3>その他施設</h3>
+              <p>福祉施設や交流施設など</p>
+            </article>
+          </a>
+        </div>
+        <p><a href="index.html">← 戻る</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© My Site </p>
+    </footer>
+
+    <!-- トップに戻るボタン -->
+    <button id="scrollToTopBtn" aria-label="トップに戻る">↑</button>
+  </div>
+  <script src="nav.js"></script>
+
+  <script>
+  // トップに戻るボタンの表示/非表示制御
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  const wrap = document.getElementById('wrap');
+
+  wrap.addEventListener('scroll', () => {
+    if (wrap.scrollTop > 300) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    wrap.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  </script>
+</body>
+
+</html>
