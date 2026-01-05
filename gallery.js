@@ -80,14 +80,32 @@ function loadGalleries() {
         slide.style.opacity = '1';
         slide.style.transform = 'translateY(0)';
 
-        // Add data attributes for lightbox
+        // Add data attributes for lightbox - initial value
         slide.setAttribute('data-src', item.src);
         slide.setAttribute('data-title', item.title);
 
-        slide.innerHTML = `
-          <img src="${item.src}" alt="${item.title}" loading="lazy">
-          <p>${item.title}</p>
-        `;
+        // Smart Image Loading logic
+        const img = document.createElement('img');
+        img.alt = item.title;
+        img.loading = 'lazy';
+
+        img.onerror = function () {
+          // If the src includes 'images/' and fails, try without it (root directory)
+          if (this.src.includes('/images/')) {
+            const fileName = this.src.split('/images/').pop();
+            this.onerror = null; // Prevent infinite loop
+            this.src = fileName;
+            // Update data-src for lightbox to ensure it opens the valid image
+            slide.setAttribute('data-src', fileName);
+          }
+        };
+        img.src = item.src;
+
+        const p = document.createElement('p');
+        p.textContent = item.title;
+
+        slide.appendChild(img);
+        slide.appendChild(p);
         wrapper.appendChild(slide);
       });
 
@@ -141,6 +159,7 @@ function loadGalleries() {
     }
   });
 }
+
 // Lightbox logic
 function setupLightbox() {
   const lightbox = document.getElementById('lightbox');
@@ -224,4 +243,3 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     }
   });
 });
-
