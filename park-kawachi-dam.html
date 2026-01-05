@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>河内ダム | 鳥栖市紹介サイト</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <h1><a href="index.html">鳥栖市(Tosu)</a></h1>
+
+      <input type="checkbox" id="navBtn">
+      <label for="navBtn" class="open"><span></span></label>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">鳥栖市について</a></li>
+          <li class="nav-heading">おすすめスポット</li>
+          <li><a href="park.html">公園・緑地</a></li>
+          <li><a href="shopping.html">ショッピングモール</a></li>
+          <li><a href="gourmet.html">グルメ</a></li>
+          <li><a href="history.html">歴史・文化</a></li>
+          <li><a href="facility.html">施設</a></li>
+        </ul>
+      </nav>
+        <div class="hero">
+          <picture>
+            <source media="(max-width: 599px)" srcset="images/K468_Original.jpg">
+            <source media="(min-width: 600px)" srcset="images/K468_Original.jpg">
+            <img src="images/K468_Original.jpg" alt="河内ダム">
+          </picture>
+          <div class="hero-text">
+            <h2>河内ダム</h2>
+            <p>自然に囲まれたダムスポット</p>
+          </div>
+        </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h2>河内ダムについて</h2>
+        <p>河内ダムは、豊かな自然に囲まれた鳥栖市の重要な水源地です。四季折々の美しい景観が楽しめ、散策やレクリーション、自然観察に最適な場所として多くの訪問者に親しまれています。</p>
+      </section>
+
+      <section class="gallery">
+        <h2>河内ダムの様子</h2>
+        <div class="blog-posts">
+          <article class="blog-post">
+            <img src="images/KIMG_0965.jpeg" alt="河内ダムの風景1">
+            <h3>ダムの眺望</h3>
+            <p>広大なダム湖の美しい眺望が広がります。</p>
+          </article>
+          <article class="blog-post">
+            <img src="images/KIMG_0967.jpeg" alt="自然の風景2">
+            <h3>水辺の散策路</h3>
+            <p>小川沿いを歩く気持ちの良い散策路です。</p>
+          </article>
+          <article class="blog-post">
+            <img src="images/KIMG_0971.jpeg" alt="河内ダムの風景3">
+            <h3>季節の変化</h3>
+            <p>四季折々に変わる自然の美しさが楽しめます。</p>
+          </article>
+        </div>
+        <p><a href="park.html">← 公園・緑地一覧に戻る</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© My Site </p>
+    </footer>
+
+    <!-- トップに戻るボタン -->
+    <button id="scrollToTopBtn" aria-label="トップに戻る">↑</button>
+  </div>
+  <script src="nav.js"></script>
+
+  <script>
+  // トップに戻るボタンの表示/非表示制御
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  const wrap = document.getElementById('wrap');
+
+  wrap.addEventListener('scroll', () => {
+    if (wrap.scrollTop > 300) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    wrap.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  </script>
+</body>
+
+</html>
