@@ -95,8 +95,10 @@ nav a:hover::after {
 /* Main Visual */
 .main-visual {
   height: 100vh;
-  /* Full height */
-  background: url("images/KIMG_0805.jpeg") center/cover no-repeat fixed;
+  background-image: url("./images/KIMG_0805.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
