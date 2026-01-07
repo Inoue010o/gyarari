@@ -138,7 +138,7 @@ nav a:hover::after {
 
 /* Gallery Section */
 .under-area {
-  padding: 120px 5%;
+  padding: 60px 5%;
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -151,18 +151,19 @@ nav a:hover::after {
   font-weight: 300;
   letter-spacing: 0.2em;
   position: relative;
+  display: block;
 }
 
-.section-title.animate-text {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+.section-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--accent);
+  margin: 1.5rem auto 0;
 }
 
-.section-title.animate-text.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+
 
 /* Swiper Customization */
 .swiper {
@@ -382,4 +383,90 @@ footer {
     display: none;
     /* Should implement hamburger menu for full mobile support */
   }
+}
+
+/* Omikuji Section (Restored & Refined) */
+.omikuji-section {
+  text-align: center;
+  background-color: var(--bg-color);
+  padding: 80px 5%;
+  position: relative;
+}
+
+.omikuji-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background: var(--card-bg);
+  border-radius: 4px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.omikuji-container p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.btn-omikuji {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  margin-top: 10px;
+  font-family: var(--font-main);
+}
+
+.btn-omikuji:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn-omikuji:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.omikuji-result {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-out, opacity 0.6s;
+  opacity: 0;
+  margin-top: 30px;
+}
+
+.omikuji-result.show {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.result-inner {
+  padding: 30px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  background: #fff;
+}
+
+.omikuji-main-text {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #d63031;
+  /* Keeping red for Omikuji tradition */
+  margin-bottom: 15px;
+  letter-spacing: 0.1em;
+}
+
+.omikuji-sub-text {
+  color: var(--text-color);
+  font-size: 0.95rem;
 }

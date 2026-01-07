@@ -1,55 +1,55 @@
 // Photo Gallery Data organized by category
 const galleryData = {
   park: [
-    { src: 'images/KIMG_0627.jpg', title: '公園の風景' },
-    { src: 'images/KIMG_0799.jpeg', title: '緑豊かな公園' },
-    { src: 'images/KIMG_0588.jpg', title: '自然の中の散策路' },
-    { src: 'images/KIMG_0967.jpeg', title: '公園のアクティビティ' },
-    { src: 'images/BIMG_0597.jpg', title: '公園の四季' },
-    { src: 'images/BIMG_0598.jpg', title: '遊び場' },
-    { src: 'images/KIMG_0589.jpg', title: '公園の景色' },
-    { src: 'images/KIMG_0590.jpg', title: '自然環境' },
-    { src: 'images/KIMG_0591.jpg', title: '自然風景' },
-    { src: 'images/KIMG_0593.jpg', title: '景観' },
+    { src: 'images/KIMG_0976.jpeg', title: '市民の森' },
+    { src: 'images/KIMG_0805.jpeg', title: '都市公園' },
+    { src: 'images/KIMG_0806.jpeg', title: '芝生広場' },
+    { src: 'images/KIMG_0965.jpeg', title: '河内ダム' },
+    { src: 'images/KIMG_0971.jpeg', title: '展望台' },
+    { src: 'images/ochouzuKIMG_0725のコピー.jpg', title: '御手洗の滝' },
   ],
   building: [
-    { src: 'images/RIMG_0499.jpg', title: '市の施設' },
-    { src: 'images/RIMG_0502.jpg', title: '公共建築' },
-    { src: 'images/RIMG_0506.jpg', title: '文化施設' },
-    { src: 'images/RIMG_0510.jpg', title: 'スポーツ施設' },
-    { src: 'images/RIMG_0780.jpeg', title: '商業施設' },
-    { src: 'images/RIMG_0787.jpeg', title: 'ショッピングエリア' },
-    { src: 'images/IMG_0773.jpeg', title: '市街地の建物' },
-    { src: 'images/BIMG_0599.jpg', title: '駅前施設' },
-    { src: 'images/BIMG_0601.jpg', title: '街の光景' },
-    { src: 'images/BIMG_0602.jpg', title: '都市風景' },
+    { src: 'images/RIMG_0499.jpg', title: '陸上競技場' },
+    { src: 'images/RIMG_0502.jpg', title: '文化会館' },
+    { src: 'images/RIMG_0790.jpeg', title: 'くすり博物館' },
+    { src: 'images/RIMG_0510.jpg', title: '市民球場' },
+    { src: 'images/RIMG_0616.jpg', title: '新鳥栖駅' },
+    { src: 'images/RIMG_0506.jpg', title: '市民体育館' },
+    { src: 'images/RIMG_0578.jpg', title: 'スタジアム' },
+    { src: 'images/RIMG_0523.jpg', title: '鳥栖駅' },
+    { src: 'images/RIMG_0526.jpg', title: 'サンメッセ鳥栖' },
+    { src: 'images/RIMG_0553.jpg', title: '都市景観' },
+    { src: 'images/i.jpg', title: 'アウトレット' },
   ],
   food: [
-    { src: 'images/IMG_0497.jpeg', title: 'グルメスポット' },
-    { src: 'images/IMG_0501.jpeg', title: 'レストラン' },
-    { src: 'images/IMG_0503.jpeg', title: 'カフェ' },
-    { src: 'images/IMG_0504.jpeg', title: '地元の料理' },
-    { src: 'images/IMG_0507.jpeg', title: '食事処' },
-    { src: 'images/IMG_0509.jpeg', title: 'フードコート' },
-    { src: 'images/うどん.jpg', title: 'うどん' },
+    { src: 'images/GIMG_2056.jpeg', title: 'ランプル台所' },
+    { src: 'images/うどん.jpg', title: '中央軒' },
+    { src: 'images/GIMG_2021.jpeg', title: '笑顔が見たいから' },
+    { src: 'images/GIMG_2041 Copy 2.jpeg', title: 'フレンズ' },
+    { src: 'images/GIMG_2018 3.jpeg', title: '牛船' },
+    { src: 'images/GIMG_2064.jpg', title: '夢を語れ' },
+    { src: 'images/GIMG_2052.jpeg', title: 'かつみや' },
+    { src: 'images/GIMG_2040 Copy 2.jpeg', title: '道市場' },
+    { src: 'images/GIMG_2045 2.jpeg', title: '天ぷら まき' },
   ],
   history: [
-    { src: 'images/asahiKIMG_0638.jpeg', title: '旭神社' },
-    { src: 'images/asahiKIMG_0640.jpeg', title: '歴史的建造物' },
-    { src: 'images/asahiKIMG_0643.jpeg', title: '神社境内' },
-    { src: 'images/ochouzuKIMG_0724のコピー.jpg', title: '手水舎' },
-    { src: 'images/ochouzuKIMG_0725のコピー.jpg', title: '伝統文化' },
-    { src: 'images/ochouzuKIMG_0729.jpg', title: '歴史遺産' },
-    { src: 'images/ochouzuKIMG_0730のコピー.jpg', title: '文化財' },
-    { src: 'images/GIMG_2017.jpeg', title: '祭りの様子' },
+    { src: 'images/BIMG_0633.jpeg', title: '旭山公園' },
+    { src: 'images/BIMG_0683.jpeg', title: '八幡神社' },
+    { src: 'images/IMG_0994.jpeg', title: '香椎宮' },
+    { src: 'images/BIMG_0812.jpeg', title: '慈光寺' },
+    { src: 'images/BIMG_0605.jpg', title: '八坂神社' },
+    { src: 'images/asahiKIMG_0638.jpeg', title: '朝日神社' },
+    { src: 'images/BIMG_0601.jpg', title: '268号機関車' },
+  ],
+  other: [
+    { src: 'images/RIMG_0584.jpg', title: 'サロンパスアリーナ' },
+    { src: 'images/20200621_184008 2.jpg', title: '産業施設' },
   ]
 };
 
 // Initialize galleries on page load
 document.addEventListener('DOMContentLoaded', () => {
   loadGalleries();
-  // Animation is now handled by Swiper or initial CSS, but we can keep scroll trigger if needed for the section title
-  // setupScrollAnimations(); // Removed as Swiper handles display differently
   setupLightbox();
 });
 
@@ -127,7 +127,7 @@ function loadGalleries() {
       // Initialize Swiper
       new Swiper(`.swiper-${category}`, {
         slidesPerView: 1,
-        spaceBetween: 20,
+        spaceBetween: 15,
         loop: true,
         autoplay: {
           delay: 3000,
@@ -144,15 +144,15 @@ function loadGalleries() {
         breakpoints: {
           640: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 15,
           },
           1024: {
             slidesPerView: 3,
-            spaceBetween: 30,
+            spaceBetween: 20,
           },
           1280: {
             slidesPerView: 4,
-            spaceBetween: 30,
+            spaceBetween: 20,
           }
         }
       });
