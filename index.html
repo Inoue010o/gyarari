@@ -24,7 +24,7 @@
 				<li><a href="#building">施設</a></li>
 				<li><a href="#food">グルメ</a></li>
 				<li><a href="#history">歴史</a></li>
-				<li><a href="#history">歴史</a></li>
+				<li><a href="#other">その他</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -35,7 +35,7 @@
 
 	<a name="park" id="park">・</a>
 	<div class="under-area">
-		<h2 class="section-title animate-text">公園・緑地</h2>
+		<h2 class="section-title">公園・緑地</h2>
 		<div id="gallery-park" class="gallery">
 			<!-- Images will be loaded by JavaScript -->
 		</div>
@@ -43,7 +43,7 @@
 
 	<a name="building" id="building">・</a>
 	<div class="under-area">
-		<h2 class="section-title animate-text">施設</h2>
+		<h2 class="section-title">施設</h2>
 		<div id="gallery-building" class="gallery">
 			<!-- Images will be loaded by JavaScript -->
 		</div>
@@ -51,7 +51,7 @@
 
 	<a name="food" id="food">・</a>
 	<div class="under-area">
-		<h2 class="section-title animate-text">グルメ</h2>
+		<h2 class="section-title">グルメ</h2>
 		<div id="gallery-food" class="gallery">
 			<!-- Images will be loaded by JavaScript -->
 		</div>
@@ -59,13 +59,37 @@
 
 	<a name="history" id="history">・</a>
 	<div class="under-area">
-		<h2 class="section-title animate-text">歴史・文化</h2>
+		<h2 class="section-title">歴史・文化</h2>
 		<div id="gallery-history" class="gallery">
 			<!-- Images will be loaded by JavaScript -->
 		</div>
 	</div>
 
 
+
+
+	<a name="other" id="other">・</a>
+	<div class="under-area">
+		<h2 class="section-title">その他</h2>
+		<div id="gallery-other" class="gallery">
+			<!-- Images will be loaded by JavaScript -->
+		</div>
+	</div>
+
+	<a name="omikuji" id="omikuji">・</a>
+	<div class="under-area omikuji-section">
+		<h2 class="section-title">おみくじ</h2>
+		<div class="omikuji-container">
+			<p>今日の運勢を占ってみよう！</p>
+			<button id="omikuji-btn" class="btn-omikuji">おみくじを引く</button>
+			<div id="omikuji-result" class="omikuji-result">
+				<div class="result-inner">
+					<p id="omikuji-text" class="omikuji-main-text"></p>
+					<p id="omikuji-desc" class="omikuji-sub-text"></p>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div id="lightbox" class="lightbox">
 		<span class="close">&times;</span>
@@ -82,7 +106,7 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="gallery.js"></script>
-	<script src="nav.js"></script>
+	<script src="omikuji.js"></script>
 	<script src="nav.js"></script>
 	<script src="scroll-animation.js"></script>
 	<script src="swiper-init.js"></script>
